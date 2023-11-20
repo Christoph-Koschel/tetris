@@ -38,7 +38,7 @@ Here is a step-by-step guide to building the demo version:
 3. Open a terminal in the project folder
 4. Install the TSB Build Toolchain
    ```shell
-   npm install utils/tsb-2.0.0.tgz --global
+   npm install ./utils/tsb-2.0.0.tgz --global
    ```
 5. Install dependencies
    ```shell
