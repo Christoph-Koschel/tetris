@@ -12,7 +12,7 @@ This project is a demo version of the classic game Tetris and written for a Proj
 - [tsb](https://github.com/Christoph-Koschel/tsb) - _Christoph Koschel_ [GPL-3.0] \
   For parsing and bundling TypeScript into a browser-friendly JavaScript environment.
 - [typedoc](https://github.com/TypeStrong/typedoc) - _TypeStrong_ [Apache 2.0] \
-  For generating document files from JSDoc.
+  For generating documentation files from JSDoc.
 
 ## Playing
 
