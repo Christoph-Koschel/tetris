@@ -12,21 +12,32 @@ import {Tetris} from "./core";
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from "./constants";
 import {Game, Render} from "./rendering";
 
+/**
+ * Entry point of the game.
+ * This function block should be the only one interacting with HTML.
+ */
 window.addEventListener("load", () => {
+    // Fetch canvas
     const canvas: HTMLCanvasElement = document.querySelector("canvas");
-    const tetris: Game = new Tetris();
+    // Get drawable context of the canvas element
     const ctx: Render = canvas.getContext("2d");
+    // Init the game Tetris
+    const tetris: Game = new Tetris();
 
-    const style: CSSStyleDeclaration = getComputedStyle(document.body);
-    console.log("Load");
+    // Set the actual screen width
     canvas.style.width = "500px";
+    // Set the resolution
     canvas.width = SCREEN_WIDTH;
     canvas.height = SCREEN_HEIGHT;
 
+    // Start the game
     tetris.start(ctx);
 
+    // Frame loop
     function loop(): void {
+        // Exec game loop
         tetris.loop(ctx);
+        // Request next frame
         window.requestAnimationFrame(loop);
     }
 
